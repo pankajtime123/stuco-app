@@ -1,0 +1,189 @@
+:root {
+  --yellow: #f5c32c;
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: rgba(36, 45, 73, 0.65);
+  --profileShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+  --hrColor: #cfcdcd;
+  --cardColor: rgba(255, 255, 255, 0.64);
+  --buttonBg: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
+  --inputColor: rgba(40, 52, 62, 0.07);
+  --photo: #4CB256;
+  --video: #4A4EB7;
+  --location: #EF5757;
+--shedule: #E1AE4A;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-size: 62.5%; */
+}
+
+.App {
+  position: relative;
+  color: var(--black);
+  background: #f3f3f3;
+ 
+}
+
+.main{
+  width: 100vw;
+  display: flex;
+  gap: 1rem;
+  padding: 0 .5rem;
+}
+
+.right, .left{
+  
+  flex: 1;
+}
+.center{
+  padding: 0 6%;
+  width: 100%;
+  flex: 2;
+
+}
+
+/* blur */
+.blur {
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #a6ddf0;
+  filter: blur(72px);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--buttonBg);
+  transition: all 100ms ease-out;
+}
+
+.button:hover {
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  cursor: pointer;
+  background: transparent;
+}
+
+.button:disabled{
+  background: silver;
+  pointer-events: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray);
+}
+
+
+/* Form Styling */
+.infoForm{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  height: 100%;
+ 
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 1rem;
+}
+
+.infoInput{
+  border: none;
+  outline: none;
+  background-color: var(--inputColor);
+  border-radius: 8px;
+  padding:  15px 0;
+  padding-left: .5rem;
+  width: 100%;
+}
+
+.input-container>div{
+ display: flex;
+ gap: 1rem;
+ max-width: 100%;
+}
+
+.infoButton{
+  width: 6rem;
+  height: 2rem;
+  align-self: flex-end;
+}
+
+.file-select>div>span{
+  font-size: .8em;
+}
+
+.file-select{
+  display: flex;
+
+}
+ .file-select>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .6rem;
+
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+  .main{
+    display: flex;
+  }
+  .center{
+    padding: 0;
+      max-width: 100%;  
+      /* margin: 0 auto; */
+  }
+
+  .left,.right{
+    display: none;
+  }
+
+  .input-container>div{
+    display: flex;
+    flex-direction: column;
+    /* border: red 1px solid; */
+    gap: 1rem;
+    width: 100%;
+   }
+   .infoInput{
+      
+      width: 100%;
+   }
+  
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (mix-width: 600px) {
+
+ 
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+
